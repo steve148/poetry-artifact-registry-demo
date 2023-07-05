@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "my-dumb-library"
+version = "0.1.0"
+description = ""
+authors = ["Lennox Stevenson <lennox.stevenson@perpetua.io>"]
+readme = "README.md"
+packages = [{include = "my_dumb_library"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

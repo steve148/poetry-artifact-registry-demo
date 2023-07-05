@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "my-dumb-app"
+version = "0.1.0"
+description = ""
+authors = ["Lennox Stevenson <lennox.stevenson@perpetua.io>"]
+readme = "README.md"
+packages = [{include = "my_dumb_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+my-dumb-library = {version = "^0.1.0", source = "my-dumb-pypi"}
+
+
+[[tool.poetry.source]]
+name = "my-dumb-pypi"
+url = "https://us-central1-python.pkg.dev/perp-dhendry-dev-809180/my-dumb-python-repo/simple/"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
